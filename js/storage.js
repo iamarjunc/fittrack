@@ -57,7 +57,13 @@
       body: JSON.stringify(dbCache)
     })
     .then(function(res) {
-      if (!res.ok) throw new Error('Failed to save to server');
+      if (!res.ok) {
+        return res.json().then(function(errData) {
+          throw new Error(errData.detail || 'Failed to save to server');
+        }).catch(function() {
+          throw new Error('Save failed (Status ' + res.status + ')');
+        });
+      }
       return res.json();
     })
     .then(function() {
@@ -81,7 +87,13 @@
   function loadFromServer() {
     return fetch('/api/data')
       .then(function(res) {
-        if (!res.ok) throw new Error('Failed to fetch data');
+        if (!res.ok) {
+          return res.json().then(function(errData) {
+            throw new Error(errData.detail || 'Failed to fetch data');
+          }).catch(function() {
+            throw new Error('Fetch failed (Status ' + res.status + ')');
+          });
+        }
         return res.json();
       })
       .then(function(data) {
