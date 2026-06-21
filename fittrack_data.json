@@ -1,5 +1,12 @@
 {
-  "settings": {},
+  "settings": {
+    "theme": "dark",
+    "proteinGoal": 160,
+    "waterGoal": 3,
+    "openaiKey": "",
+    "userName": "Athlete",
+    "settingsLastModified": ""
+  },
   "logs": {
     "2026-06-21": {
       "date": "2026-06-21",
@@ -11,7 +18,7 @@
       "notes": "",
       "disciplineScore": 10,
       "aiSummary": "",
-      "lastModified": "2026-06-21T16:27:27.665Z"
+      "lastModified": "2026-06-21T16:29:18.894Z"
     }
   }
 }
