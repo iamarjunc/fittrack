@@ -10,15 +10,25 @@
   "logs": {
     "2026-06-21": {
       "date": "2026-06-21",
-      "food": [],
+      "food": [
+        {
+          "name": "White Rice (1 cup cooked)",
+          "calories": 206,
+          "protein": 4,
+          "carbs": 45,
+          "fat": 0,
+          "id": "mqo076w67qzo6",
+          "time": "10:01 PM"
+        }
+      ],
       "water": 0,
-      "protein": 0,
+      "protein": 4,
       "training": [],
       "tasks": [],
       "notes": "",
       "disciplineScore": 10,
       "aiSummary": "",
-      "lastModified": "2026-06-21T16:30:52.893Z"
+      "lastModified": "2026-06-21T16:31:14.598Z"
     }
   }
 }
