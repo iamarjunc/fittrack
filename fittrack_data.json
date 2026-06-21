@@ -10,34 +10,15 @@
   "logs": {
     "2026-06-21": {
       "date": "2026-06-21",
-      "food": [
-        {
-          "name": "White Rice (1 cup cooked)",
-          "calories": 206,
-          "protein": 4,
-          "carbs": 45,
-          "fat": 0,
-          "id": "mqo076w67qzo6",
-          "time": "10:01 PM"
-        }
-      ],
-      "water": 3,
-      "protein": 4,
-      "training": [
-        {
-          "type": "Kickboxing",
-          "intensity": "low",
-          "duration": 52,
-          "notes": "",
-          "id": "mqo07z0t2ao2w",
-          "time": "10:01 PM"
-        }
-      ],
+      "food": [],
+      "water": 0,
+      "protein": 0,
+      "training": [],
       "tasks": [],
       "notes": "",
-      "disciplineScore": 50,
+      "disciplineScore": 0,
       "aiSummary": "",
-      "lastModified": "2026-06-21T16:48:27.690Z"
+      "lastModified": "2026-06-21T16:49:49.833Z"
     }
   }
 }
