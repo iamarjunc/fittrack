@@ -1,11 +1,11 @@
 {
   "settings": {
-    "theme": "dark",
+    "theme": "light",
     "proteinGoal": 160,
     "waterGoal": 3,
     "openaiKey": "",
     "userName": "Arjun",
-    "settingsLastModified": "2026-06-21T16:30:07.870Z"
+    "settingsLastModified": "2026-06-21T16:50:49.497Z"
   },
   "logs": {
     "2026-06-21": {
