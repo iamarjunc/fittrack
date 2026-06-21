@@ -1,0 +1,7 @@
+# Local data storage
+fittrack_data.json
+
+# Python caches
+__pycache__/
+*.pyc
+.pytest_cache/
