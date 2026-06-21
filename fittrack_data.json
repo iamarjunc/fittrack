@@ -1,0 +1,17 @@
+{
+  "settings": {},
+  "logs": {
+    "2026-06-21": {
+      "date": "2026-06-21",
+      "food": [],
+      "water": 0,
+      "protein": 0,
+      "training": [],
+      "tasks": [],
+      "notes": "",
+      "disciplineScore": 10,
+      "aiSummary": "",
+      "lastModified": "2026-06-21T16:26:56.358Z"
+    }
+  }
+}
