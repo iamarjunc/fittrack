@@ -23,21 +23,12 @@
       ],
       "water": 0,
       "protein": 4,
-      "training": [
-        {
-          "type": "Kickboxing",
-          "intensity": "low",
-          "duration": 52,
-          "notes": "",
-          "id": "mqo07z0t2ao2w",
-          "time": "10:01 PM"
-        }
-      ],
+      "training": [],
       "tasks": [],
       "notes": "",
       "disciplineScore": 11,
       "aiSummary": "",
-      "lastModified": "2026-06-21T16:31:51.054Z"
+      "lastModified": "2026-06-21T16:31:55.707Z"
     }
   }
 }
