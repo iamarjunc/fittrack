@@ -21,7 +21,7 @@
           "time": "10:01 PM"
         }
       ],
-      "water": 0,
+      "water": 3,
       "protein": 4,
       "training": [
         {
@@ -37,7 +37,7 @@
       "notes": "",
       "disciplineScore": 30,
       "aiSummary": "",
-      "lastModified": "2026-06-21T16:32:41.592Z"
+      "lastModified": "2026-06-21T16:33:12.826Z"
     }
   }
 }
