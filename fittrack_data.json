@@ -1,17 +1,33 @@
 {
-  "settings": {},
+  "settings": {
+    "theme": "dark",
+    "proteinGoal": 160,
+    "waterGoal": 3,
+    "openaiKey": "",
+    "userName": "Athlete",
+    "settingsLastModified": ""
+  },
   "logs": {
     "2026-06-21": {
       "date": "2026-06-21",
       "food": [],
       "water": 0,
       "protein": 0,
-      "training": [],
+      "training": [
+        {
+          "type": "Grappling",
+          "intensity": "medium",
+          "duration": 23,
+          "notes": "",
+          "id": "mqo03gtyhoqma",
+          "time": "09:58 PM"
+        }
+      ],
       "tasks": [],
       "notes": "",
       "disciplineScore": 10,
       "aiSummary": "",
-      "lastModified": "2026-06-21T16:26:56.358Z"
+      "lastModified": "2026-06-21T16:28:20.854Z"
     }
   }
 }
