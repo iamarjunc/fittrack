@@ -1,7 +1,7 @@
 import os
 import json
 import base64
-from typing import Dict, Any
+from typing import Dict, Any, Optional
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
@@ -28,6 +28,7 @@ GITHUB_REPO = os.environ.get("GITHUB_REPO") # Format: "username/repo"
 class SyncPayload(BaseModel):
     settings: Dict[str, Any]
     logs: Dict[str, Any]
+    lastModifiedDate: Optional[str] = None
 
 def get_github_headers():
     return {
@@ -95,6 +96,39 @@ def save_to_github(data: dict):
             raise e
         raise HTTPException(status_code=500, detail=f"Failed to save to GitHub: {str(e)}")
 
+def fetch_sha_from_github(path: str):
+    url = f"https://api.github.com/repos/{GITHUB_REPO}/contents/{path}"
+    try:
+        response = requests.get(url, headers=get_github_headers())
+        if response.status_code == 200:
+            return response.json().get("sha")
+        return None
+    except Exception:
+        return None
+
+def save_day_to_github(date_str: str, day_log: dict):
+    path = f"daily_logs/{date_str}.json"
+    url = f"https://api.github.com/repos/{GITHUB_REPO}/contents/{path}"
+    
+    sha = fetch_sha_from_github(path)
+    
+    json_str = json.dumps(day_log, indent=2)
+    b64_content = base64.b64encode(json_str.encode("utf-8")).decode("utf-8")
+    
+    payload = {
+        "message": f"Update daily log for {date_str} [Vercel Sync]",
+        "content": b64_content
+    }
+    if sha:
+        payload["sha"] = sha
+        
+    try:
+        response = requests.put(url, headers=get_github_headers(), json=payload)
+        if response.status_code not in [200, 201]:
+            print(f"Failed to save daily log to GitHub: {response.text}")
+    except Exception as e:
+        print(f"Error saving daily log to GitHub: {str(e)}")
+
 @app.get("/api/data")
 def get_data():
     # 1. Try GitHub sync if environment variables are set
@@ -123,12 +157,23 @@ def save_data(payload: SyncPayload):
     # 1. Try GitHub Sync
     if GITHUB_TOKEN and GITHUB_REPO:
         save_to_github(data)
+        if payload.lastModifiedDate and payload.lastModifiedDate in payload.logs:
+            day_log = payload.logs[payload.lastModifiedDate]
+            save_day_to_github(payload.lastModifiedDate, day_log)
         return {"status": "success", "storage": "github"}
         
     # 2. Local Fallback
     try:
         with open(DATA_FILE, "w", encoding="utf-8") as f:
             json.dump(data, f, indent=2, ensure_ascii=False)
+            
+        if payload.lastModifiedDate and payload.lastModifiedDate in payload.logs:
+            day_log = payload.logs[payload.lastModifiedDate]
+            os.makedirs("daily_logs", exist_ok=True)
+            daily_file = os.path.join("daily_logs", f"{payload.lastModifiedDate}.json")
+            with open(daily_file, "w", encoding="utf-8") as f:
+                json.dump(day_log, f, indent=2, ensure_ascii=False)
+                
         return {"status": "success", "storage": "local"}
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error writing local data file: {str(e)}")

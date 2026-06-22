@@ -38,8 +38,13 @@
 
   let isSaving = false;
   let savePending = false;
+  let lastModifiedDate = null;
 
-  function saveToServer() {
+  function saveToServer(dateStr) {
+    if (dateStr) {
+      lastModifiedDate = dateStr;
+    }
+
     if (isSaving) {
       savePending = true;
       return;
@@ -50,12 +55,19 @@
       dataChangedCallback('saving');
     }
 
+    const payload = {
+      settings: dbCache.settings,
+      logs: dbCache.logs,
+      lastModifiedDate: lastModifiedDate
+    };
+    lastModifiedDate = null;
+
     fetch('/api/data', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(dbCache)
+      body: JSON.stringify(payload)
     })
     .then(function(res) {
       if (!res.ok) {
@@ -153,7 +165,7 @@
   function saveDayLog(dateStr, dayData) {
     dayData.lastModified = new Date().toISOString();
     dbCache.logs[dateStr] = dayData;
-    saveToServer();
+    saveToServer(dateStr);
     if (dataChangedCallback) {
       dataChangedCallback('log', dateStr);
     }
@@ -164,7 +176,7 @@
     day.date = dateStr;
     day.lastModified = new Date().toISOString();
     dbCache.logs[dateStr] = day;
-    saveToServer();
+    saveToServer(dateStr);
     if (dataChangedCallback) {
       dataChangedCallback('log', dateStr);
     }
