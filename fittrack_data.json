@@ -3,7 +3,6 @@
     "theme": "dark",
     "proteinGoal": 160,
     "waterGoal": 3,
-    "openaiKey": "",
     "userName": "Arjun",
     "settingsLastModified": "2026-06-21T16:51:02.993Z"
   },
@@ -39,7 +38,7 @@
       "notes": "",
       "disciplineScore": 47,
       "aiSummary": "",
-      "lastModified": "2026-06-22T06:30:25.549Z"
+      "lastModified": "2026-06-22T06:32:22.429Z"
     }
   }
 }
