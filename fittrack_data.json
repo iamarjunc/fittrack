@@ -23,7 +23,7 @@
     "2026-06-22": {
       "date": "2026-06-22",
       "food": [],
-      "water": 0,
+      "water": 1,
       "protein": 0,
       "training": [
         {
@@ -39,7 +39,7 @@
       "notes": "",
       "disciplineScore": 34,
       "aiSummary": "",
-      "lastModified": "2026-06-22T05:54:14.085Z"
+      "lastModified": "2026-06-22T05:54:26.313Z"
     }
   }
 }
