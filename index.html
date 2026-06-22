@@ -806,8 +806,19 @@
             <input type="text" id="settings-username" class="form-input" placeholder="Athlete" />
           </div>
           <div class="form-group">
+            <label class="form-label" for="settings-height">Height (cm)</label>
+            <input type="number" id="settings-height" class="form-input" placeholder="171" min="100" max="250" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="settings-weight">Weight (kg)</label>
+            <input type="number" id="settings-weight" class="form-input" placeholder="62" min="30" max="200" />
+          </div>
+          <div class="form-group">
             <label class="form-label" for="settings-protein-goal">Daily Protein Goal (g)</label>
-            <input type="number" id="settings-protein-goal" class="form-input" placeholder="160" min="10" max="500" />
+            <input type="number" id="settings-protein-goal" class="form-input" placeholder="136" min="10" max="500" />
+            <div style="font-size:11px;color:var(--text-muted);margin-top:4px">
+              Recommended for MMA: ~2.2g per kg of bodyweight
+            </div>
           </div>
           <div class="form-group">
             <label class="form-label" for="settings-water-goal">Daily Water Goal (bottles)</label>

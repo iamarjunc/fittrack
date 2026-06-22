@@ -1137,6 +1137,25 @@
     var s = state.settings;
 
     bindSettingInput('settings-username', s.userName, function(v) { s.userName = v; S.saveSettings(s); state.settings = s; });
+    bindSettingInput('settings-height', s.height, function(v) {
+      var val = Number(v);
+      if (val > 0) { s.height = val; S.saveSettings(s); state.settings = s; }
+    });
+    bindSettingInput('settings-weight', s.weight, function(v) {
+      var val = Number(v);
+      if (val > 0) {
+        s.weight = val;
+        var newGoal = Math.round(val * 2.2);
+        s.proteinGoal = newGoal;
+        var proteinInput = document.getElementById('settings-protein-goal');
+        if (proteinInput) proteinInput.value = newGoal;
+        S.saveSettings(s);
+        state.settings = s;
+        renderProteinPage();
+        renderFoodPage();
+        renderDashboard();
+      }
+    });
     bindSettingInput('settings-protein-goal', s.proteinGoal, function(v) {
       var val = Number(v);
       if (val > 0) { s.proteinGoal = val; S.saveSettings(s); state.settings = s; }

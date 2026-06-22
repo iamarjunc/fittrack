@@ -1,39 +1,42 @@
 {
   "settings": {
     "theme": "dark",
-    "proteinGoal": 160,
+    "proteinGoal": 136,
     "waterGoal": 3,
     "userName": "Arjun",
-    "settingsLastModified": "2026-06-21T16:51:02.993Z"
+    "height": 171,
+    "weight": 62,
+    "settingsLastModified": ""
   },
   "logs": {
     "2026-06-21": {
       "date": "2026-06-21",
-      "food": [],
+      "food": [
+        {
+          "name": "Whey Protein Shake",
+          "calories": 130,
+          "protein": 25,
+          "carbs": 5,
+          "fat": 2,
+          "id": "mqnyo9odjxu1u",
+          "time": "09:18 PM"
+        }
+      ],
       "water": 0,
-      "protein": 0,
+      "protein": 25,
       "training": [],
       "tasks": [],
       "notes": "",
-      "disciplineScore": 10,
+      "disciplineScore": 15,
       "aiSummary": "",
-      "lastModified": "2026-06-21T16:51:20.446Z"
+      "lastModified": "2026-06-21T16:08:32.809Z"
     },
     "2026-06-22": {
       "date": "2026-06-22",
       "food": [],
-      "water": 2,
+      "water": 21,
       "protein": 0,
-      "training": [
-        {
-          "type": "Running",
-          "intensity": "medium",
-          "duration": 55,
-          "notes": "",
-          "id": "mqosu5oi0mdmi",
-          "time": "11:22 AM"
-        }
-      ],
+      "training": [],
       "tasks": [],
       "notes": "",
       "disciplineScore": 47,

@@ -13,9 +13,11 @@
 
   const DEFAULT_SETTINGS = {
     theme: 'dark',
-    proteinGoal: 160,
+    proteinGoal: 136,
     waterGoal: 3,
-    userName: 'Athlete',
+    userName: 'Arjun',
+    height: 171,
+    weight: 62,
     settingsLastModified: '',
   };
 
