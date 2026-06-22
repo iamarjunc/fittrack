@@ -25,12 +25,21 @@
       "food": [],
       "water": 0,
       "protein": 0,
-      "training": [],
+      "training": [
+        {
+          "type": "Running",
+          "intensity": "medium",
+          "duration": 55,
+          "notes": "",
+          "id": "mqosu5oi0mdmi",
+          "time": "11:22 AM"
+        }
+      ],
       "tasks": [],
       "notes": "",
       "disciplineScore": 10,
       "aiSummary": "",
-      "lastModified": "2026-06-22T05:52:45.103Z"
+      "lastModified": "2026-06-22T05:52:55.363Z"
     }
   }
 }
