@@ -19,6 +19,18 @@
       "disciplineScore": 10,
       "aiSummary": "",
       "lastModified": "2026-06-21T16:51:20.446Z"
+    },
+    "2026-06-22": {
+      "date": "2026-06-22",
+      "food": [],
+      "water": 0,
+      "protein": 0,
+      "training": [],
+      "tasks": [],
+      "notes": "",
+      "disciplineScore": 10,
+      "aiSummary": "",
+      "lastModified": "2026-06-22T05:49:40.149Z"
     }
   }
 }
