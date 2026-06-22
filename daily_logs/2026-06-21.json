@@ -23,16 +23,9 @@
       "time": "10:01 PM"
     }
   ],
-  "tasks": [
-    {
-      "text": "Drive from home to Kochi",
-      "category": "other",
-      "id": "mqow8heaeljsy",
-      "completed": false
-    }
-  ],
+  "tasks": [],
   "notes": "",
-  "disciplineScore": 50,
+  "disciplineScore": 40,
   "aiSummary": "",
-  "lastModified": "2026-06-22T07:28:02.578Z"
+  "lastModified": "2026-06-22T07:28:09.325Z"
 }
