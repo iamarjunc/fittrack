@@ -15,7 +15,6 @@
     theme: 'dark',
     proteinGoal: 160,
     waterGoal: 3,
-    openaiKey: '',
     userName: 'Athlete',
     settingsLastModified: '',
   };
@@ -99,6 +98,7 @@
       .then(function(data) {
         dbCache.settings = data.settings || {};
         dbCache.logs = data.logs || {};
+        delete dbCache.settings.openaiKey;
         dbCache.settings = Object.assign({}, DEFAULT_SETTINGS, dbCache.settings);
         return dbCache;
       });
@@ -114,6 +114,7 @@
       settings.settingsLastModified = new Date().toISOString();
     }
     dbCache.settings = settings;
+    delete dbCache.settings.openaiKey;
     saveToServer();
     if (dataChangedCallback) {
       dataChangedCallback('settings');
@@ -340,11 +341,34 @@
     dataChangedCallback = cb;
   }
 
+  function getOpenAIKey() {
+    try {
+      return localStorage.getItem('fittrack_openai_key') || '';
+    } catch (e) {
+      console.error('Failed to read OpenAI API key from localStorage:', e);
+      return '';
+    }
+  }
+
+  function saveOpenAIKey(key) {
+    try {
+      if (key) {
+        localStorage.setItem('fittrack_openai_key', key);
+      } else {
+        localStorage.removeItem('fittrack_openai_key');
+      }
+    } catch (e) {
+      console.error('Failed to write OpenAI API key to localStorage:', e);
+    }
+  }
+
   // Expose globally
   window.FitStorage = {
     getSettings: getSettings,
     saveSettings: saveSettings,
     updateSetting: updateSetting,
+    getOpenAIKey: getOpenAIKey,
+    saveOpenAIKey: saveOpenAIKey,
     getAllLogs: getAllLogs,
     saveAllLogs: saveAllLogs,
     getDayLog: getDayLog,

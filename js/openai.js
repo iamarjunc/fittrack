@@ -41,7 +41,7 @@
   }
 
   function generateAISummary(dayLog, settings) {
-    var apiKey = settings.openaiKey;
+    var apiKey = window.FitStorage.getOpenAIKey();
     if (!apiKey) {
       return Promise.reject(new Error('No OpenAI API key set. Please add your key in Settings.'));
     }

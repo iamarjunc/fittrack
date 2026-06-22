@@ -475,7 +475,7 @@
       aiBtn.addEventListener('click', function() {
         var q = nameInput ? nameInput.value.trim() : '';
         if (!q) { showToast('Please type a food name first', 'warning'); return; }
-        if (!state.settings.openaiKey) {
+        if (!S.getOpenAIKey()) {
           showToast('⚠️ Add your OpenAI API key in Settings to use AI lookup', 'warning');
           return;
         }
@@ -620,7 +620,7 @@
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer ' + state.settings.openaiKey,
+        'Authorization': 'Bearer ' + S.getOpenAIKey(),
       },
       body: JSON.stringify({
         model: 'gpt-4o-mini',
@@ -1070,7 +1070,7 @@
   function generateSummary() {
     var btn = document.getElementById('ai-generate-btn');
     var el = document.getElementById('ai-summary-display');
-    if (!state.settings.openaiKey) {
+    if (!S.getOpenAIKey()) {
       showToast('⚠️ Please add your OpenAI API key in Settings first', 'warning');
       navigateTo('settings');
       return;
@@ -1148,17 +1148,21 @@
 
     var apiEl = document.getElementById('settings-api-key');
     if (apiEl) {
-      apiEl.value = s.openaiKey || '';
-      apiEl.placeholder = s.openaiKey ? '••••••••••••' : 'sk-...';
+      var apiKey = S.getOpenAIKey();
+      apiEl.value = apiKey || '';
+      apiEl.placeholder = apiKey ? '••••••••••••' : 'sk-...';
     }
 
     var saveApiBtn = document.getElementById('save-api-key');
     if (saveApiBtn && !saveApiBtn._hasListener) {
       saveApiBtn._hasListener = true;
       saveApiBtn.addEventListener('click', function() {
-        s.openaiKey = (apiEl ? apiEl.value.trim() : '');
-        S.saveSettings(s);
-        state.settings = s;
+        var keyVal = (apiEl ? apiEl.value.trim() : '');
+        S.saveOpenAIKey(keyVal);
+        if (apiEl) {
+          apiEl.value = keyVal;
+          apiEl.placeholder = keyVal ? '••••••••••••' : 'sk-...';
+        }
         showToast('✅ API key saved', 'success');
       });
     }
