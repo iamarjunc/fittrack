@@ -18,10 +18,19 @@
       "fat": 18,
       "id": "mqowbbd04uug8",
       "time": "01:00 PM"
+    },
+    {
+      "name": "3 porotta + 1 cup kadala curry",
+      "calories": 700,
+      "protein": 18,
+      "carbs": 90,
+      "fat": 30,
+      "id": "mqowc6ia94ndh",
+      "time": "01:00 PM"
     }
   ],
   "water": 3,
-  "protein": 29,
+  "protein": 47,
   "training": [
     {
       "type": "Kickboxing",
@@ -34,7 +43,7 @@
   ],
   "tasks": [],
   "notes": "",
-  "disciplineScore": 50,
+  "disciplineScore": 54,
   "aiSummary": "",
-  "lastModified": "2026-06-22T07:30:14.725Z"
+  "lastModified": "2026-06-22T07:30:55.091Z"
 }
