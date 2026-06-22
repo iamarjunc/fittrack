@@ -20,10 +20,19 @@
           "fat": 0,
           "id": "mqo076w67qzo6",
           "time": "10:01 PM"
+        },
+        {
+          "name": "Chicken Curry (1 bowl)",
+          "calories": 300,
+          "protein": 25,
+          "carbs": 8,
+          "fat": 18,
+          "id": "mqowbbd04uug8",
+          "time": "01:00 PM"
         }
       ],
       "water": 3,
-      "protein": 4,
+      "protein": 29,
       "training": [
         {
           "type": "Kickboxing",
@@ -38,7 +47,7 @@
       "notes": "",
       "disciplineScore": 50,
       "aiSummary": "",
-      "lastModified": "2026-06-22T07:28:11.509Z"
+      "lastModified": "2026-06-22T07:30:14.725Z"
     },
     "2026-06-22": {
       "date": "2026-06-22",
