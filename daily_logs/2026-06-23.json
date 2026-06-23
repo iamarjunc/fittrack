@@ -1,12 +1,22 @@
 {
   "date": "2026-06-23",
-  "food": [],
+  "food": [
+    {
+      "name": "Breakfast idyappam + green piece curry",
+      "calories": 300,
+      "protein": 10,
+      "carbs": 50,
+      "fat": 8,
+      "id": "mqqa8flwx8qto",
+      "time": "12:17 PM"
+    }
+  ],
   "water": 0,
-  "protein": 0,
+  "protein": 10,
   "training": [],
   "tasks": [],
   "notes": "",
   "disciplineScore": 10,
   "aiSummary": "",
-  "lastModified": "2026-06-23T06:43:31.535Z"
+  "lastModified": "2026-06-23T06:47:41.061Z"
 }
