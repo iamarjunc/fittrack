@@ -196,12 +196,18 @@
           "category": "nutrition",
           "id": "mqqac1e2i2914",
           "completed": false
+        },
+        {
+          "text": "10 min stretching",
+          "category": "nutrition",
+          "id": "mqqac8qwjn0df",
+          "completed": false
         }
       ],
       "notes": "",
-      "disciplineScore": 17,
+      "disciplineScore": 7,
       "aiSummary": "",
-      "lastModified": "2026-06-23T06:50:29.258Z"
+      "lastModified": "2026-06-23T06:50:38.792Z"
     }
   }
 }
