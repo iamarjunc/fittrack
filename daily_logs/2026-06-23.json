@@ -72,7 +72,7 @@
       "text": "Track all meals",
       "category": "nutrition",
       "id": "mqqac1e2i2914",
-      "completed": false
+      "completed": true
     },
     {
       "text": "10 min stretching",
@@ -96,5 +96,5 @@
   "notes": "",
   "disciplineScore": 41,
   "aiSummary": "### \ud83c\udfc6 Overall Discipline Assessment\nYou're showing dedication, but today\u2019s log indicates some areas need attention to keep you on track with your goals.\n\n### \u2705 What I Did Well\n- **Protein Intake**: You incorporated whey protein, which is a great step towards reaching your protein goal.  \n- **Food Choices**: The breakfast option was nutritious with a good mix of carbs and protein.\n\n### \ud83c\udfaf Top 2-3 Suggestions for Improvement\n1. **Increase Protein Intake**: Aim to include more protein-rich foods in your meals, like eggs, legumes, or lean meats, to get closer to your goal.\n2. **Hydration**: Focus on drinking more water throughout the day. Setting a reminder can help you reach your 3-bottle goal.\n3. **Training Consistency**: Consider scheduling at least some light activity, even on rest days, to maintain momentum in your fitness journey.\n\nKeep pushing forward! You\u2019ve got this! \ud83d\udcaa",
-  "lastModified": "2026-06-23T10:37:44.703Z"
+  "lastModified": "2026-06-23T10:38:13.837Z"
 }
