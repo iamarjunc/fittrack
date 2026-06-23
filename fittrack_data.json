@@ -176,16 +176,25 @@
           "fat": 1,
           "id": "mqqa8yfbua3b7",
           "time": "12:18 PM"
+        },
+        {
+          "name": "20 gm dairy milk",
+          "calories": 12,
+          "protein": 1,
+          "carbs": 1,
+          "fat": 0,
+          "id": "mqqab4l935l17",
+          "time": "12:19 PM"
         }
       ],
       "water": 0,
-      "protein": 34,
+      "protein": 35,
       "training": [],
       "tasks": [],
       "notes": "",
       "disciplineScore": 16,
       "aiSummary": "",
-      "lastModified": "2026-06-23T06:48:36.533Z"
+      "lastModified": "2026-06-23T06:49:46.762Z"
     }
   }
 }
