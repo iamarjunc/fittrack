@@ -1,12 +1,12 @@
 {
   "settings": {
-    "theme": "dark",
+    "theme": "light",
     "proteinGoal": 160,
     "waterGoal": 3,
     "userName": "Arjun",
     "height": 171,
     "weight": 62,
-    "settingsLastModified": "2026-06-21T16:30:07.870Z"
+    "settingsLastModified": "2026-06-23T06:53:12.787Z"
   },
   "logs": {
     "2026-06-21": {
