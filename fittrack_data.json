@@ -208,12 +208,18 @@
           "category": "nutrition",
           "id": "mqqacadczzwi8",
           "completed": false
+        },
+        {
+          "text": "Drink whey protein shake",
+          "category": "nutrition",
+          "id": "mqqacexhyzbdo",
+          "completed": false
         }
       ],
       "notes": "",
       "disciplineScore": 7,
       "aiSummary": "",
-      "lastModified": "2026-06-23T06:50:40.896Z"
+      "lastModified": "2026-06-23T06:50:46.805Z"
     }
   }
 }
