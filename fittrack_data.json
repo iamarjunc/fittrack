@@ -167,16 +167,25 @@
           "fat": 8,
           "id": "mqqa8flwx8qto",
           "time": "12:17 PM"
+        },
+        {
+          "name": "Whey Protein 1 scoop",
+          "calories": 120,
+          "protein": 24,
+          "carbs": 3,
+          "fat": 1,
+          "id": "mqqa8yfbua3b7",
+          "time": "12:18 PM"
         }
       ],
       "water": 0,
-      "protein": 10,
+      "protein": 34,
       "training": [],
       "tasks": [],
       "notes": "",
-      "disciplineScore": 10,
+      "disciplineScore": 12,
       "aiSummary": "",
-      "lastModified": "2026-06-23T06:47:41.061Z"
+      "lastModified": "2026-06-23T06:48:05.448Z"
     }
   }
 }
