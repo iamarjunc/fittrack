@@ -190,11 +190,18 @@
       "water": 0,
       "protein": 35,
       "training": [],
-      "tasks": [],
+      "tasks": [
+        {
+          "text": "Track all meals",
+          "category": "nutrition",
+          "id": "mqqac1e2i2914",
+          "completed": false
+        }
+      ],
       "notes": "",
-      "disciplineScore": 16,
+      "disciplineScore": 17,
       "aiSummary": "",
-      "lastModified": "2026-06-23T06:49:46.762Z"
+      "lastModified": "2026-06-23T06:50:29.258Z"
     }
   }
 }
